@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahana - Studio of Ink, Art & Letters</title>
+    <title>Shahana | Studio of Ink, Art & Letters</title>
     <style>
+        /* Importing elegant fonts for an artistic feel */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+
         :root {
-            --bg-color: #fdfcf8;
-            --text-color: #2b2b2b;
-            --accent-color: #5a5a5a;
-            --border-color: #e5e0d8;
+            --primary-bg: #fdfbf7; /* Warm, paper-like background */
+            --text-dark: #2c2c2c;
+            --accent: #d4af37; /* Gold accent for elegance */
+            --card-bg: #ffffff;
         }
 
         * {
@@ -19,213 +22,212 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
+        /* Header Section */
         header {
             text-align: center;
-            padding: 5rem 2rem 3rem;
-            border-bottom: 1px solid var(--border-color);
+            padding: 100px 20px 60px;
+            background: linear-gradient(to bottom, #ffffff, var(--primary-bg));
         }
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: normal;
-            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
             letter-spacing: 1px;
         }
 
-        .tagline {
+        .subtitle {
             font-style: italic;
-            color: var(--accent-color);
-            margin-bottom: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 20px;
         }
 
-        .quick-links a {
-            display: inline-block;
-            margin: 0 1rem;
-            color: var(--text-color);
-            text-decoration: none;
-            border-bottom: 1px solid var(--text-color);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding-bottom: 2px;
-            transition: color 0.3s ease;
+        .bio {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #555;
         }
 
-        .quick-links a:hover {
-            color: #888;
-            border-bottom-color: #888;
-        }
-
-        main {
-            max-width: 1000px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 0 20px;
         }
 
-        section {
-            margin-bottom: 4rem;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            font-weight: normal;
+        .section-title {
+            font-family: 'Playfair Display', serif;
             text-align: center;
-            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            margin: 60px 0 40px;
             position: relative;
         }
 
-        h2::after {
+        .section-title::after {
             content: '';
             display: block;
-            width: 50px;
-            height: 1px;
-            background-color: var(--text-color);
-            margin: 1rem auto 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 15px auto 0;
         }
 
-        .section-desc {
-            text-align: center;
-            font-style: italic;
-            color: var(--accent-color);
-            margin-bottom: 2rem;
-        }
-
-        .grid {
+        /* Certificate Grid Showcase */
+        .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
         }
 
-        .card {
-            background: #fff;
-            padding: 1rem;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            text-align: center;
+        .cert-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            cursor: pointer;
         }
 
-        .card-placeholder {
+        .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .cert-image {
             width: 100%;
-            height: 200px;
-            background-color: #f5f3ec;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-color);
-            font-style: italic;
-            margin-bottom: 1rem;
+            height: 240px;
+            background-color: #eaeaea;
+            object-fit: cover;
+            border-bottom: 1px solid #f0f0f0;
+            transition: transform 0.4s ease;
+        }
+
+        .cert-card:hover .cert-image {
+            transform: scale(1.03);
+        }
+
+        .cert-info {
+            padding: 25px;
+            text-align: center;
+            background: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cert-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .cert-issuer {
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        /* Buttons & Footer */
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--text-dark);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: var(--accent);
         }
 
         footer {
             text-align: center;
-            padding: 3rem 2rem;
-            background-color: #fff;
-            border-top: 1px solid var(--border-color);
+            padding: 50px 20px;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-size: 0.9rem;
         }
 
-        .contact-btn {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background-color: var(--text-color);
-            color: #fff;
-            text-decoration: none;
-            margin-top: 1rem;
-            border-radius: 3px;
-            transition: background 0.3s;
+        footer p {
+            margin-bottom: 10px;
         }
-
-        .contact-btn:hover {
-            background-color: var(--accent-color);
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .quick-links a { display: block; margin: 1rem 0; }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .section-title { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Shahana</h1>
-        <p>Studio of Ink, Art & Letters</p>
-        <p class="tagline">A practice of quiet ink, careful hands and patient letters. Est. 2018.</p>
-        
-        <div class="quick-links">
-            <a href="#">View Full Resume</a>
-            <a href="https://github.com/SHAHANA-DESIGNS">GitHub Profile</a>
+        <div class="container">
+            <h1>Shahana</h1>
+            <p class="subtitle">Studio of Ink, Art & Letters</p>
+            <p class="bio">A practice of quiet ink, careful hands and patient letters. Est. 2018. <br> Collecting original illustrations, handwritten language worksheets, and accredited teaching credentials.</p>
+            <a href="mailto:your-email@example.com" class="btn">Contact the Studio</a>
         </div>
     </header>
 
-    <main>
-        <!-- Artworks Section -->
-        <section id="artworks">
-            <h2>Original Artworks</h2>
-            <p class="section-desc">Graphite, ink, and watercolour working notebooks.</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <div class="card-placeholder">Artwork 1</div>
-                    <h3>Mandala Ink</h3>
-                </div>
-                <div class="card">
-                    <div class="card-placeholder">Artwork 2</div>
-                    <h3>Watercolour Study</h3>
-                </div>
-                <div class="card">
-                    <div class="card-placeholder">Artwork 3</div>
-                    <h3>Calligraphy Quote</h3>
+    <main class="container">
+        <h2 class="section-title">Accredited Certifications</h2>
+        
+        <div class="cert-grid">
+            <!-- Certificate 1 -->
+            <div class="cert-card">
+                <!-- Replace src with your GitHub image URLs -->
+                <img src="https://via.placeholder.com/600x400/eeeeee/999999?text=Insert+Certificate+Image+Here" alt="Certificate 1" class="cert-image">
+                <div class="cert-info">
+                    <h3 class="cert-title">Language Teaching Credential</h3>
+                    <p class="cert-issuer">Accrediting Institution</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Education Section -->
-        <section id="education">
-            <h2>The Hindi Primer</h2>
-            <p class="section-desc">A five-part handwritten worksheet set designed for adult beginners.</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <div class="card-placeholder">Lessons 1 & 2</div>
-                    <h3>Foundations</h3>
-                </div>
-                <div class="card">
-                    <div class="card-placeholder">Lessons 3 & 4</div>
-                    <h3>Vocabulary</h3>
-                </div>
-                <div class="card">
-                    <div class="card-placeholder">Lesson 5</div>
-                    <h3>Application</h3>
+            <!-- Certificate 2 -->
+            <div class="cert-card">
+                <img src="https://via.placeholder.com/600x400/eeeeee/999999?text=Insert+Certificate+Image+Here" alt="Certificate 2" class="cert-image">
+                <div class="cert-info">
+                    <h3 class="cert-title">Design & Illustration</h3>
+                    <p class="cert-issuer">Accrediting Institution</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Software Projects Section -->
-        <section id="projects">
-            <h2>Digital Projects</h2>
-            <p class="section-desc">Tools made with care and a little bit of code.</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <h3>Market-Moment</h3>
-                    <p style="margin-top: 1rem; font-size: 0.9rem;">A JavaScript tool to create small marketing campaigns around upcoming public holidays.</p>
-                    <a href="https://github.com/SHAHANA-DESIGNS/Market-Moment" style="display:inline-block; margin-top: 1rem; color: var(--accent-color);">View Repository &rarr;</a>
+            <!-- Certificate 3 -->
+            <div class="cert-card">
+                <img src="https://via.placeholder.com/600x400/eeeeee/999999?text=Insert+Certificate+Image+Here" alt="Certificate 3" class="cert-image">
+                <div class="cert-info">
+                    <h3 class="cert-title">Educational Pedagogy</h3>
+                    <p class="cert-issuer">Accrediting Institution</p>
                 </div>
             </div>
-        </section>
+            
+            <!-- You can duplicate the <div class="cert-card"> blocks above to add all 12 of your credentials -->
+        </div>
     </main>
 
     <footer>
-        <h2>Studio Contact & Commissions</h2>
-        <p>Open for selected illustration commissions and one-on-one Hindi tutoring sessions.</p>
-        <a href="mailto:your.email@example.com" class="contact-btn">Email the Studio</a>
-        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--accent-color);">© 2026 Shahana Designs. All rights reserved.</p>
+        <div class="container">
+            <p>© 2026 Shahana | Studio of Ink, Art & Letters.</p>
+            <p><em>Made with care, paper and a little bit of code.</em></p>
+        </div>
     </footer>
 
 </body>
