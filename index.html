@@ -1,234 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahana | Studio of Ink, Art & Letters</title>
-    <style>
-        /* Importing elegant fonts for an artistic feel */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
-
-        :root {
-            --primary-bg: #fdfbf7; /* Warm, paper-like background */
-            --text-dark: #2c2c2c;
-            --accent: #d4af37; /* Gold accent for elegance */
-            --card-bg: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--primary-bg);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        /* Header Section */
-        header {
-            text-align: center;
-            padding: 100px 20px 60px;
-            background: linear-gradient(to bottom, #ffffff, var(--primary-bg));
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            color: var(--text-dark);
-            letter-spacing: 1px;
-        }
-
-        .subtitle {
-            font-style: italic;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .bio {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            color: #555;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            font-size: 2.5rem;
-            margin: 60px 0 40px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent);
-            margin: 15px auto 0;
-        }
-
-        /* Certificate Grid Showcase */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            margin-bottom: 80px;
-        }
-
-        .cert-card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-        }
-
-        .cert-image {
-            width: 100%;
-            height: 240px;
-            background-color: #eaeaea;
-            object-fit: cover;
-            border-bottom: 1px solid #f0f0f0;
-            transition: transform 0.4s ease;
-        }
-
-        .cert-card:hover .cert-image {
-            transform: scale(1.03);
-        }
-
-        .cert-info {
-            padding: 25px;
-            text-align: center;
-            background: #fff;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cert-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-            color: var(--text-dark);
-        }
-
-        .cert-issuer {
-            font-size: 0.85rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-        }
-
-        /* Buttons & Footer */
-        .btn {
-            display: inline-block;
-            padding: 12px 35px;
-            background-color: var(--text-dark);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            transition: background 0.3s;
-            margin-top: 10px;
-        }
-
-        .btn:hover {
-            background-color: var(--accent);
-        }
-
-        footer {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #1a1a1a;
-            color: #f0f0f0;
-            font-size: 0.9rem;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.8rem; }
-            .section-title { font-size: 2rem; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shahana — artist, illustrator, Hindi tutor and creative maker. A portfolio of original art, handwritten learning materials, credentials and digital projects.">
+  <meta name="theme-color" content="#f6efe5">
+  <title>Shahana — Ink, Art & Letters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="grain"></div>
 
-    <header>
-        <div class="container">
-            <h1>Shahana</h1>
-            <p class="subtitle">Studio of Ink, Art & Letters</p>
-            <p class="bio">A practice of quiet ink, careful hands and patient letters. Est. 2018. <br> Collecting original illustrations, handwritten language worksheets, and accredited teaching credentials.</p>
-            <a href="mailto:your-email@example.com" class="btn">Contact the Studio</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Shahana home">
+      <span class="brand-mark">S</span>
+      <span>Shahana</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#lessons">Hindi</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="#contact">Let's work together <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span> Studio of Ink, Art & Letters</p>
+        <h1>Quiet work.<br><em>Distinct voice.</em></h1>
+        <p class="hero-text">Original illustration, handwritten language learning and thoughtful digital experiments — made slowly, intentionally and with a love for details.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#work">Explore the work <span>↓</span></a>
+          <a class="text-link" href="https://github.com/SHAHANA-DESIGNS" target="_blank" rel="noopener">View GitHub ↗</a>
         </div>
-    </header>
+        <div class="hero-note">Est. 2018 · Art · Education · Digital</div>
+      </div>
 
-    <main class="container">
-        <h2 class="section-title">Accredited Certifications</h2>
-        
-        <div class="cert-grid">
-            <!-- Certificate 1 -->
-            <div class="cert-card">
-                <!-- Replace src with your GitHub image URLs -->
-                <img src="https://via.placeholder.com/600x400/eeeeee/999999?text=Insert+Certificate+Image+Here" alt="Certificate 1" class="cert-image">
-                <div class="cert-info">
-                    <h3 class="cert-title">Language Teaching Credential</h3>
-                    <p class="cert-issuer">Accrediting Institution</p>
-                </div>
-            </div>
-
-            <!-- Certificate 2 -->
-            <div class="cert-card">
-                <img src="https://via.placeholder.com/600x400/eeeeee/999999?text=Insert+Certificate+Image+Here" alt="Certificate 2" class="cert-image">
-                <div class="cert-info">
-                    <h3 class="cert-title">Design & Illustration</h3>
-                    <p class="cert-issuer">Accrediting Institution</p>
-                </div>
-            </div>
-
-            <!-- Certificate 3 -->
-            <div class="cert-card">
-                <img src="https://via.placeholder.com/600x400/eeeeee/999999?text=Insert+Certificate+Image+Here" alt="Certificate 3" class="cert-image">
-                <div class="cert-info">
-                    <h3 class="cert-title">Educational Pedagogy</h3>
-                    <p class="cert-issuer">Accrediting Institution</p>
-                </div>
-            </div>
-            
-            <!-- You can duplicate the <div class="cert-card"> blocks above to add all 12 of your credentials -->
+      <div class="hero-art reveal reveal-delay">
+        <div class="sun"></div>
+        <div class="hero-frame">
+          <img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/ARTS/main/ART-1.JPEG" alt="Original artwork by Shahana" loading="eager">
+          <div class="frame-caption">
+            <span>01 / 15</span>
+            <span>Original artwork</span>
+          </div>
         </div>
-    </main>
+        <div class="scribble">made by hand</div>
+        <div class="stamp">SH<br>2018</div>
+      </div>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 Shahana | Studio of Ink, Art & Letters.</p>
-            <p><em>Made with care, paper and a little bit of code.</em></p>
+    <section class="marquee" aria-label="Areas of practice">
+      <div class="marquee-track">
+        <span>Illustration</span><i>✦</i><span>Hand lettering</span><i>✦</i><span>Hindi learning</span><i>✦</i><span>Digital experiments</span><i>✦</i>
+        <span>Illustration</span><i>✦</i><span>Hand lettering</span><i>✦</i><span>Hindi learning</span><i>✦</i><span>Digital experiments</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Things made with <em>care.</em></h2>
+        <p>Three parts of the studio: artwork, learning materials and small digital products.</p>
+      </div>
+
+      <div class="work-grid">
+        <article class="feature-card art-feature reveal">
+          <div class="feature-image tall">
+            <img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/ARTS/main/ART-7.JPEG" alt="Shahana original artwork" loading="lazy">
+            <span class="floating-label">01 — Art</span>
+          </div>
+          <div class="feature-copy">
+            <div>
+              <p class="mini-label">Graphite · Ink · Watercolour</p>
+              <h3>Original artworks</h3>
+              <p>A growing collection of observational studies, expressive marks and notebook-born pieces.</p>
+            </div>
+            <a class="round-arrow" href="#gallery" aria-label="View artwork gallery">↗</a>
+          </div>
+        </article>
+
+        <div class="side-stack">
+          <article class="feature-card lesson-feature reveal">
+            <div class="feature-image">
+              <img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/CERTIFICATIONS/main/Hindi-L-3.jpeg" alt="Handwritten Hindi learning worksheet" loading="lazy">
+              <span class="floating-label">02 — Learning</span>
+            </div>
+            <div class="feature-copy compact">
+              <div>
+                <p class="mini-label">Handwritten worksheet set</p>
+                <h3>The Hindi Primer</h3>
+                <p>Five-part beginner-friendly lessons for adults.</p>
+              </div>
+              <a class="round-arrow" href="#lessons" aria-label="View Hindi lessons">↗</a>
+            </div>
+          </article>
+
+          <article class="feature-card digital-feature reveal">
+            <div class="digital-art">
+              <span class="tiny-code">MARKET<br>MOMENT</span>
+              <div class="orb orb-one"></div><div class="orb orb-two"></div>
+              <div class="digital-line line-one"></div><div class="digital-line line-two"></div>
+            </div>
+            <div class="feature-copy compact">
+              <div>
+                <p class="mini-label">JavaScript · Product experiment</p>
+                <h3>Market Moment</h3>
+                <p>A small campaign-planning experience built around upcoming public holidays.</p>
+              </div>
+              <a class="round-arrow" href="https://github.com/SHAHANA-DESIGNS/Market-Moment" target="_blank" rel="noopener" aria-label="Open Market Moment repository">↗</a>
+            </div>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
 
+    <section class="gallery-section" id="gallery">
+      <div class="section-heading split reveal">
+        <div>
+          <p class="eyebrow">The gallery</p>
+          <h2>15 pieces, one <em>visual diary.</em></h2>
+        </div>
+        <p>Graphite, ink and watercolour studies collected in working notebooks.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="about-section section" id="about">
+      <div class="about-portrait reveal">
+        <img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/ARTS/main/ART-12.JPEG" alt="Artwork detail" loading="lazy">
+        <div class="portrait-caption">a little paper,<br>a little patience.</div>
+      </div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">About the studio</p>
+        <h2>A practice of quiet ink, <em>careful hands</em> and patient letters.</h2>
+        <p>This portfolio brings together Shahana's original illustrations, handwritten language worksheets, accredited credentials and creative coding experiments.</p>
+        <p>The work moves between physical and digital worlds: a pencil line can become a learning aid; a worksheet can become a teaching system; a simple web experiment can become a useful little product.</p>
+        <div class="signature">Shahana</div>
+        <a class="button button-outline" href="https://github.com/SHAHANA-DESIGNS" target="_blank" rel="noopener">Open studio on GitHub ↗</a>
+      </div>
+    </section>
+
+    <section class="credentials-section section" id="credentials">
+      <div class="section-heading split reveal">
+        <div>
+          <p class="eyebrow">Credentials</p>
+          <h2>Learning that has been <em>documented.</em></h2>
+        </div>
+        <p>12 credential scans are kept in the public studio archive, alongside language, design and education materials.</p>
+      </div>
+      <div class="credential-strip">
+        <div class="credential-number">12</div>
+        <div>
+          <p class="mini-label">Accredited credentials</p>
+          <h3>Language teaching · Design · Education</h3>
+          <p class="muted">Browse the credential archive or download the resume.</p>
+        </div>
+        <a class="button button-dark" href="https://github.com/SHAHANA-DESIGNS/CERTIFICATIONS" target="_blank" rel="noopener">View credentials ↗</a>
+      </div>
+      <div class="cert-preview">
+        <div class="cert-preview-card"><img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/CERTIFICATIONS/main/C-1.JPEG" alt="Certificate scan 1" loading="lazy"></div>
+        <div class="cert-preview-card offset"><img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/CERTIFICATIONS/main/C-6.JPEG" alt="Certificate scan 6" loading="lazy"></div>
+        <div class="cert-preview-card"><img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/CERTIFICATIONS/main/C-12.JPEG" alt="Certificate scan 12" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="lessons-section section" id="lessons">
+      <div class="lesson-copy reveal">
+        <p class="eyebrow">The Hindi Primer</p>
+        <h2>Learning can be <em>beautiful.</em></h2>
+        <p>A five-part handwritten worksheet set designed for adult beginners. Clear, tactile and intentionally human.</p>
+        <a class="button button-dark" href="https://github.com/SHAHANA-DESIGNS/CERTIFICATIONS" target="_blank" rel="noopener">Explore all lessons ↗</a>
+      </div>
+      <div class="lesson-stack reveal">
+        <div class="lesson-card card-1"><span>01</span><img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/CERTIFICATIONS/main/Hindi-L-1.jpeg" alt="Hindi lesson 1" loading="lazy"></div>
+        <div class="lesson-card card-2"><span>03</span><img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/CERTIFICATIONS/main/Hindi-L-3.jpeg" alt="Hindi lesson 3" loading="lazy"></div>
+        <div class="lesson-card card-3"><span>05</span><img src="https://raw.githubusercontent.com/SHAHANA-DESIGNS/CERTIFICATIONS/main/Hindi-L-5.jpeg" alt="Hindi lesson 5" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="resume-section section reveal">
+      <div class="resume-card">
+        <div>
+          <p class="eyebrow">Studio archive</p>
+          <h2>Want the full story?</h2>
+          <p>View the complete resume and explore the public repositories behind the work.</p>
+        </div>
+        <div class="resume-actions">
+          <a class="button button-dark" href="https://raw.githubusercontent.com/SHAHANA-DESIGNS/SHAHANA-DESIGNS/main/MSH-RESUME.jpg" target="_blank" rel="noopener">View resume ↗</a>
+          <a class="button button-outline" href="https://github.com/SHAHANA-DESIGNS" target="_blank" rel="noopener">GitHub profile ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">Open for selected commissions</p>
+        <h2>Let's make something<br><em>worth keeping.</em></h2>
+        <p>Illustration commissions · one-on-one Hindi tutoring · creative collaborations</p>
+        <a class="email-link" href="mailto:your-email@example.com">your-email@example.com <span>↗</span></a>
+        <div class="contact-links">
+          <a href="https://github.com/SHAHANA-DESIGNS" target="_blank" rel="noopener">GitHub</a>
+          <span>·</span>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Shahana</span>
+    <span>Made with care, paper & a little bit of code.</span>
+    <span>Studio of Ink, Art & Letters</span>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <img id="lightboxImage" src="" alt="">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
